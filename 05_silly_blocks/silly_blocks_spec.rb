@@ -23,7 +23,7 @@ describe "some silly block functions" do
       # The way this method can get that do-end block is through yield.
       #
       # def example 
-      #   string = yield # yield is equal to... 
+      #   string = yield # yield is equal to...
       #   string.upcase
       # end
       # 
@@ -72,6 +72,11 @@ describe "some silly block functions" do
         n += 3
       end
       n.should == 5
+      # If n = 2, x = 3, (n += x) = 5
+      # If n = 3, x = 2, (n += x) = 4
+      # If n = 4, x = 1
+      # If n >= 5, x = 0
+      # If n = 0, 
     end
 
     it "executes the default block 3 times" do
